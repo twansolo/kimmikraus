@@ -16,8 +16,16 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Kimmi Kraus | Sports & Therapeutic Massage",
-  description: "Sports and therapeutic massage for men who refuse to slow down. Relief from chronic pain, faster recovery, and better movement.",
+  title: "Mobile Sports Massage Cedar Rapids | Kimmi Kraus Massage Therapy",
+  description: "Professional mobile sports massage therapy in Cedar Rapids & Eastern Iowa. Therapeutic massage for injury recovery, chronic pain relief, and athletic performance. Licensed therapist—we come to you.",
+  keywords: ["sports massage Cedar Rapids", "mobile massage therapy", "therapeutic massage Iowa", "deep tissue massage", "injury recovery massage", "sports massage therapist"],
+  openGraph: {
+    title: "Mobile Sports Massage Cedar Rapids | Kimmi Kraus",
+    description: "Professional mobile sports & therapeutic massage delivered to your home in Cedar Rapids and Eastern Iowa. Relief from chronic pain, faster recovery, better movement.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Kimmi Kraus Massage",
+  },
 };
 
 export default function RootLayout({
