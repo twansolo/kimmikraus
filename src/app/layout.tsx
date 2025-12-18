@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -26,10 +27,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link 
+          href="https://calendar.google.com/calendar/scheduling-button-script.css" 
+          rel="stylesheet" 
+        />
+      </head>
       <body
         className={`${dmSans.variable} ${dmSerif.variable} antialiased`}
       >
         {children}
+        <Script 
+          src="https://calendar.google.com/calendar/scheduling-button-script.js" 
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

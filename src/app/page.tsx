@@ -13,6 +13,7 @@ import {
   InstagramIcon,
   FacebookIcon
 } from "@/components/Icons";
+import { BookingButton, BookingEmbed } from "@/components/BookingButton";
 
 // Data extracted for cleaner JSX and better text-to-HTML ratio
 const targetAudience = [
@@ -332,9 +333,9 @@ export default function Home() {
               <h3 className="mt-2 font-[family-name:var(--font-dm-serif)] text-2xl text-[var(--foreground)]">60 Minute Massage</h3>
               <p className="mt-4 font-[family-name:var(--font-dm-serif)] text-4xl text-[var(--rose)]">$120</p>
               <p className="mt-4 text-[var(--silver)]">Focused treatment for specific problem areas. Ideal for maintenance sessions or when you need targeted relief for a particular issue. Includes assessment, treatment, and aftercare recommendations.</p>
-              <Link href="#book" className="mt-6 block border border-[var(--rose)] py-3 text-center font-medium text-[var(--rose)] transition-all hover:bg-[var(--rose)] hover:text-[var(--background)]">
-                Book 60 Minute Session
-              </Link>
+              <div className="mt-6 flex justify-center">
+                <BookingButton duration="60" label="Book 60 Min Session" />
+              </div>
             </article>
 
             <article className="relative border-2 border-[var(--rose)] bg-[var(--background)] p-8">
@@ -345,9 +346,9 @@ export default function Home() {
               <h3 className="mt-2 font-[family-name:var(--font-dm-serif)] text-2xl text-[var(--foreground)]">90 Minute Massage</h3>
               <p className="mt-4 font-[family-name:var(--font-dm-serif)] text-4xl text-[var(--rose)]">$165</p>
               <p className="mt-4 text-[var(--silver)]">Comprehensive treatment for full-body work or intensive focus on multiple problem areas. Recommended for first-time clients and those dealing with complex or chronic issues. Allows time for thorough assessment and treatment.</p>
-              <Link href="#book" className="mt-6 block bg-[var(--rose)] py-3 text-center font-medium text-[var(--background)] transition-all hover:bg-[var(--rose-light)]">
-                Book 90 Minute Session
-              </Link>
+              <div className="mt-6 flex justify-center">
+                <BookingButton duration="90" label="Book 90 Min Session" />
+              </div>
             </article>
           </div>
 
@@ -418,7 +419,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section id="book" className="border-t border-[var(--charcoal-light)] px-6 py-24" aria-labelledby="cta-heading">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <p className="mb-6 inline-flex items-center gap-2 text-sm text-[var(--rose)]">
             <LocationIcon />
             Serving Cedar Rapids, Marion, Hiawatha, and Surrounding Eastern Iowa Communities
@@ -430,14 +431,12 @@ export default function Home() {
             Stop managing your pain and start fixing it. Book your first session today and experience the difference professional sports massage therapy can make. All sessions are conducted in the privacy and comfort of your own home.
           </p>
           
+          {/* Embedded Google Calendar */}
+          <div className="mt-10 overflow-hidden rounded-lg border border-[var(--slate)] bg-white">
+            <BookingEmbed className="min-h-[600px]" />
+          </div>
+
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a 
-              href="mailto:hello@kimmikraus.com?subject=Massage%20Appointment%20Request"
-              className="group flex items-center gap-3 bg-[var(--rose)] px-10 py-5 text-lg font-semibold text-[var(--background)] transition-all hover:bg-[var(--rose-light)]"
-            >
-              Book Your Session Now
-              <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
             <a 
               href="tel:+13192140458"
               className="flex items-center gap-2 border border-[var(--slate)] px-10 py-5 text-lg font-medium text-[var(--foreground)] transition-all hover:border-[var(--silver)] hover:bg-[var(--charcoal)]"
@@ -489,22 +488,64 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": "HealthAndBeautyBusiness",
             "name": "Kimmi Kraus Massage",
             "description": "Mobile sports and therapeutic massage therapy serving Cedar Rapids and Eastern Iowa. Professional, results-driven treatment delivered to your home.",
             "url": "https://kimmikraus.com",
             "telephone": "+1-319-214-0458",
             "email": "hello@kimmikraus.com",
-            "areaServed": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 41.9779,
-                "longitude": -91.6656
-              },
-              "geoRadius": "30 mi"
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Cedar Rapids",
+              "addressRegion": "IA",
+              "postalCode": "52402",
+              "addressCountry": "US"
             },
-            "serviceType": ["Sports Massage", "Therapeutic Massage", "Deep Tissue Massage", "Mobile Massage"],
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Cedar Rapids",
+                "sameAs": "https://en.wikipedia.org/wiki/Cedar_Rapids,_Iowa"
+              },
+              {
+                "@type": "City",
+                "name": "Marion"
+              },
+              {
+                "@type": "City",
+                "name": "Hiawatha"
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Massage Therapy Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Sports Massage",
+                    "description": "Massage therapy optimized for athletes and active individuals to improve performance and accelerate recovery."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Therapeutic Deep Tissue Massage",
+                    "description": "Intensive work on chronic tension patterns, trigger point release, and structural correction."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mobile Massage",
+                    "description": "Professional massage therapy delivered directly to your home for privacy and convenience."
+                  }
+                }
+              ]
+            },
             "priceRange": "$$"
           })
         }}
