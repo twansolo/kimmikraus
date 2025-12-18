@@ -14,6 +14,7 @@ import {
   FacebookIcon
 } from "@/components/Icons";
 import { BookingButton, BookingEmbed } from "@/components/BookingButton";
+import { MobileNav } from "@/components/MobileNav";
 
 // Data extracted for cleaner JSX and better text-to-HTML ratio
 const targetAudience = [
@@ -126,14 +127,11 @@ export default function Home() {
             <Link href="#services" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">Services</Link>
             <Link href="#pricing" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">Pricing</Link>
             <Link href="/about" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">About</Link>
-            <Link href="#book" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">Book</Link>
             <Link href="#book" className="bg-[var(--rose)] px-5 py-2.5 text-sm font-semibold text-[var(--background)] transition-all hover:bg-[var(--rose-light)]">
               Book Your Session
             </Link>
           </div>
-          <Link href="#book" className="bg-[var(--rose)] px-4 py-2 text-sm font-semibold text-[var(--background)] transition-all hover:bg-[var(--rose-light)] md:hidden">
-            Book Now
-          </Link>
+          <MobileNav />
         </div>
       </nav>
 
