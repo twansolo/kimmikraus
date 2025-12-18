@@ -38,11 +38,31 @@ Kimmi Kraus Massage is a mobile massage therapy service specializing in sports m
 
 ## Key Pages
 
+### Main Pages
 - Homepage: https://kimmikraus.com
 - About Kimmi: https://kimmikraus.com/about
 - Services: https://kimmikraus.com/#services
 - Pricing: https://kimmikraus.com/#pricing
 - Book Appointment: https://kimmikraus.com/#book
+
+### Service Pages
+- Sports Massage Cedar Rapids: https://kimmikraus.com/sports-massage-cedar-rapids
+- Mobile Massage Cedar Rapids: https://kimmikraus.com/mobile-massage-cedar-rapids
+- Therapeutic Massage: https://kimmikraus.com/therapeutic-massage
+
+### Condition-Specific Pages
+- Massage for Back Pain: https://kimmikraus.com/massage-for-back-pain
+- Massage for Neck & Shoulder Pain: https://kimmikraus.com/massage-for-neck-and-shoulder-pain
+- Massage for Hip Pain: https://kimmikraus.com/massage-for-hip-pain
+- Massage for Runners: https://kimmikraus.com/massage-for-runner-injuries
+- Massage for Golfers: https://kimmikraus.com/massage-for-golfers
+
+### Educational Resources
+- What to Expect from Sports Massage: https://kimmikraus.com/what-to-expect-sports-massage
+- Sports Massage vs Regular Massage: https://kimmikraus.com/sports-massage-vs-regular-massage
+- How Often Should You Get Sports Massage: https://kimmikraus.com/how-often-sports-massage
+- Massage for Active Adults Over 40: https://kimmikraus.com/massage-for-active-adults-over-40
+- Areas Served: https://kimmikraus.com/areas-served
 
 ## Common Questions
 
@@ -58,6 +78,12 @@ A 90-minute session is recommended for new clients. This includes an assessment 
 **How often should I get massage therapy?**
 Most clients see optimal results with weekly or bi-weekly sessions. We offer packages that encourage the consistency needed for lasting improvement.
 
+**What's the difference between sports massage and regular massage?**
+Sports massage is designed to improve athletic performance, prevent injuries, and speed recovery using targeted techniques. Regular massage focuses primarily on relaxation and stress relief.
+
+**Do you help with specific conditions like back pain or runner's knee?**
+Yes, therapeutic massage addresses many common conditions including back pain, neck pain, hip pain, IT band syndrome, plantar fasciitis, golfer's elbow, and more.
+
 **Who is Kimmi Kraus?**
 Kimmi is a licensed massage therapist in Iowa, specializing in sports and therapeutic massage. She's a Cedar Rapids native, coffee enthusiast, and genuinely passionate about helping people feel better in their bodies.
 
@@ -69,3 +95,15 @@ Kimmi is a licensed massage therapist in Iowa, specializing in sports and therap
 - **License**: Licensed Massage Therapist (Iowa)
 - **Insurance**: Fully insured
 - **Specialization**: Sports massage, therapeutic massage, deep tissue massage
+
+## Service Areas
+
+- Cedar Rapids, IA
+- Marion, IA
+- Hiawatha, IA
+- Robins, IA
+- Mount Vernon, IA
+- Ely, IA
+- Fairfax, IA
+- Swisher, IA
+- And surrounding communities within approximately 30 miles of Cedar Rapids

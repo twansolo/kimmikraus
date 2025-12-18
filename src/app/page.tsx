@@ -14,7 +14,7 @@ import {
   FacebookIcon
 } from "@/components/Icons";
 import { BookingButton, BookingEmbed } from "@/components/BookingButton";
-import { MobileNav } from "@/components/MobileNav";
+import { Header } from "@/components/Header";
 
 // Data extracted for cleaner JSX and better text-to-HTML ratio
 const targetAudience = [
@@ -111,29 +111,7 @@ export default function Home() {
       </Link>
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--charcoal-light)] bg-[var(--background)]/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <Link href="/" className="block" aria-label="Kimmi Kraus Massage - Home">
-            <Image 
-              src="/logo-transparent.png" 
-              alt="Kimmi Kraus Massage - Mobile Sports Massage in Cedar Rapids" 
-              width={180} 
-              height={50}
-              className="h-12 w-auto"
-              priority
-            />
-          </Link>
-          <div className="hidden items-center gap-8 md:flex">
-            <Link href="#services" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">Services</Link>
-            <Link href="#pricing" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">Pricing</Link>
-            <Link href="/about" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">About</Link>
-            <Link href="#book" className="bg-[var(--rose)] px-5 py-2.5 text-sm font-semibold text-[var(--background)] transition-all hover:bg-[var(--rose-light)]">
-              Book Your Session
-            </Link>
-          </div>
-          <MobileNav />
-        </div>
-      </nav>
+      <Header currentPage="home" />
 
       {/* Hero Section */}
       <header className="relative min-h-screen overflow-hidden pt-20">

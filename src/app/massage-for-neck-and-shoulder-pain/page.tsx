@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRightIcon, CheckIcon } from "@/components/Icons";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,18 +13,7 @@ export const metadata: Metadata = {
 export default function MassageForNeckPain() {
   return (
     <div className="min-h-screen bg-[var(--background)]">
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--charcoal-light)] bg-[var(--background)]/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <Link href="/"><Image src="/logo-transparent.png" alt="Kimmi Kraus Massage" width={180} height={50} className="h-12 w-auto" /></Link>
-          <div className="hidden items-center gap-8 md:flex">
-            <Link href="/#services" className="text-sm text-[var(--silver)] hover:text-[var(--foreground)]">Services</Link>
-            <Link href="/#pricing" className="text-sm text-[var(--silver)] hover:text-[var(--foreground)]">Pricing</Link>
-            <Link href="/about" className="text-sm text-[var(--silver)] hover:text-[var(--foreground)]">About</Link>
-            <Link href="/#book" className="bg-[var(--rose)] px-5 py-2.5 text-sm font-semibold text-[var(--background)]">Book Your Session</Link>
-          </div>
-          <Link href="/#book" className="bg-[var(--rose)] px-4 py-2 text-sm font-semibold text-[var(--background)] md:hidden">Book Now</Link>
-        </div>
-      </nav>
+      <Header currentPage="service" />
 
       <section className="px-6 pt-32 pb-20">
         <div className="mx-auto max-w-4xl text-center">
@@ -73,13 +63,7 @@ export default function MassageForNeckPain() {
         </div>
       </section>
 
-      <footer className="border-t border-[var(--charcoal-light)] bg-[var(--charcoal)] px-6 py-12">
-        <div className="mx-auto max-w-6xl text-center">
-          <Image src="/logo-transparent.png" alt="Kimmi Kraus Massage" width={150} height={40} className="mx-auto h-10 w-auto" />
-          <p className="mt-4 text-sm text-[var(--steel)]">© {new Date().getFullYear()} Kimmi Kraus Massage. Cedar Rapids and Eastern Iowa.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
-

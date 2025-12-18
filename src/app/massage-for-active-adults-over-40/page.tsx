@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRightIcon, PhoneIcon, CheckIcon } from "@/components/Icons";
+import { ArrowRightIcon, PhoneIcon } from "@/components/Icons";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,31 +16,13 @@ const challenges = [
   { issue: "Accumulated Tension", solution: "Years of activity, stress, and postural habits create deep tension patterns that massage can systematically release." },
   { issue: "Injury Prevention", solution: "Proactive massage identifies and addresses muscle imbalances before they become injuries that sideline you." },
   { issue: "Decreased Flexibility", solution: "Sports massage combined with stretching helps maintain and improve range of motion that naturally decreases with age." },
-  { issue: "Chronic Pain Patterns", solution: "Many adults over 40 have accepted ongoing pain as &apos;normal.&apos; Therapeutic massage can often resolve issues you&apos;ve had for years." },
+  { issue: "Chronic Pain Patterns", solution: "Many adults over 40 have accepted ongoing pain as 'normal.' Therapeutic massage can often resolve issues you've had for years." },
 ];
 
 export default function MassageForActiveAdults() {
   return (
     <div className="min-h-screen bg-[var(--background)]">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--charcoal-light)] bg-[var(--background)]/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <Link href="/" className="block">
-            <Image src="/logo-transparent.png" alt="Kimmi Kraus Massage" width={180} height={50} className="h-12 w-auto" />
-          </Link>
-          <div className="hidden items-center gap-8 md:flex">
-            <Link href="/#services" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">Services</Link>
-            <Link href="/#pricing" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">Pricing</Link>
-            <Link href="/about" className="text-sm text-[var(--silver)] transition-colors hover:text-[var(--foreground)]">About</Link>
-            <Link href="/#book" className="bg-[var(--rose)] px-5 py-2.5 text-sm font-semibold text-[var(--background)] transition-all hover:bg-[var(--rose-light)]">
-              Book Your Session
-            </Link>
-          </div>
-          <Link href="/#book" className="bg-[var(--rose)] px-4 py-2 text-sm font-semibold text-[var(--background)] transition-all hover:bg-[var(--rose-light)] md:hidden">
-            Book Now
-          </Link>
-        </div>
-      </nav>
+      <Header currentPage="service" />
 
       {/* Hero */}
       <section className="relative px-6 pt-32 pb-20">
@@ -131,14 +114,7 @@ export default function MassageForActiveAdults() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-[var(--charcoal-light)] bg-[var(--charcoal)] px-6 py-12">
-        <div className="mx-auto max-w-6xl text-center">
-          <Image src="/logo-transparent.png" alt="Kimmi Kraus Massage" width={150} height={40} className="mx-auto h-10 w-auto" />
-          <p className="mt-4 text-sm text-[var(--steel)]">© {new Date().getFullYear()} Kimmi Kraus Massage. Licensed Massage Therapist serving Cedar Rapids and Eastern Iowa.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
-
